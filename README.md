@@ -11,9 +11,9 @@
 		$ sudo chown devops:logger /appvol/devops
 
 
-2.  Set the Minikube Environment Variables
+2.  Set the Minikube Environment Variables (update user profile .bash_profile as appropriate)
 
-		$export MINIKUBE_HOME=/appvol/devops/
+		$ export MINIKUBE_HOME=/appvol/devops/
 	
 	view the env_vars
 		
@@ -41,7 +41,9 @@
 		$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 	
 	
-	* check for the release version you would like to use. Latest stable version can be found https://github.com/kubernetes/minikube/releases and https://storage.googleapis.com/kubernetes-release/release/stable.txt
+	* Check for the release version you would like to use. 
+		MiniKube release version can be found https://github.com/kubernetes/minikube/releases 
+		Kubectl stable release https://storage.googleapis.com/kubernetes-release/release/stable.txt
 	
 
 6.  Ensure path includes minikube and kubectl
@@ -52,7 +54,7 @@
 	
 		$ minikube version
 		
-		$kubectl version
+		$ kubectl version
 		
 
 7.  Configure minikube. I like to use specific folder location for minikube and maintain kubernetes version inline with production
