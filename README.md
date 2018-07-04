@@ -82,4 +82,27 @@
 8.  Now start minikube
 
 		$ minikube start
+
+		sample out put
+		"	Starting local Kubernetes v1.9.4 cluster...
+			Starting VM...
+			Downloading Minikube ISO
+				153.08 MB / 153.08 MB [============================================] 100.00% 0s
+			Getting VM IP address...
+			Moving files into cluster...
+			Downloading kubeadm v1.9.4
+			Downloading kubelet v1.9.4
+			Finished Downloading kubelet v1.9.4
+			Finished Downloading kubeadm v1.9.4
+			Setting up certs...
+			Connecting to cluster...
+			Setting up kubeconfig...
+			Starting cluster components...
+			Kubectl is now configured to use the cluster.
+			Loading cached images from config file."
 		
+		"	~ $minikube status
+			minikube: Running
+			cluster: Running
+			kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.100"
+					

@@ -1,0 +1,30 @@
+{
+    "cache": {
+        "gcr.io/google_containers/etcd-amd64:3.1.11": null,
+        "gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.7": null,
+        "gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.7": null,
+        "gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.7": null,
+        "gcr.io/google_containers/kube-apiserver-amd64:v1.9.4": null,
+        "gcr.io/google_containers/kube-controller-manager-amd64:v1.9.4": null,
+        "gcr.io/google_containers/kube-proxy-amd64:v1.9.4": null,
+        "gcr.io/google_containers/kube-scheduler-amd64:v1.9.4": null,
+        "gcr.io/google_containers/pause-amd64:3.0": null,
+        "gcr.io/k8s-minikube/storage-provisioner:v1.8.0": null,
+        "gcr.io/k8s-minikube/storage-provisioner:v1.8.1": null,
+        "k8s.gcr.io/etcd-amd64:3.0.17": null,
+        "k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.4": null,
+        "k8s.gcr.io/k8s-dns-kube-dns-amd64:1.14.4": null,
+        "k8s.gcr.io/k8s-dns-sidecar-amd64:1.14.4": null,
+        "k8s.gcr.io/kube-addon-manager:v6.5": null,
+        "k8s.gcr.io/kube-addon-manager:v8.6": null,
+        "k8s.gcr.io/kube-apiserver-amd64:v1.9.4": null,
+        "k8s.gcr.io/kube-controller-manager-amd64:v1.9.4": null,
+        "k8s.gcr.io/kube-proxy-amd64:v1.9.4": null,
+        "k8s.gcr.io/kube-scheduler-amd64:v1.9.4": null,
+        "k8s.gcr.io/kubernetes-dashboard-amd64:v1.8.1": null,
+        "k8s.gcr.io/pause-amd64:3.0": null
+    },
+    "cpus": 4,
+    "kubernetes-version": "v1.9.4",
+    "memory": 8096
+}
