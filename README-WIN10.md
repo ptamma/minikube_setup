@@ -14,25 +14,24 @@ This document is an attempt to provide few more details on steps to installing m
 	
 	*AIR Gap systems behind the firewall requires proxy forwards enabled for 
 	
-		*github.com
+	=> github.com
 		
-		*gcr.io/
+	=> gcr.io/
 		
-		*k8s.gcr.io/
+	=> k8s.gcr.io/
 		
-		*storage.googleapis.com/
+	=> storage.googleapis.com/
 	
-	*Local Administrator level access required. These can be elevated privilege access to standard developer.
+	=> Local Administrator level access required. These can be elevated privilege access to standard developer.
 
-NOTE: On first run of minikube requires connection to above sites to download files. These sites are hard wired in [minikube constants](https://github.com/kubernetes/minikube/blob/master/pkg/minikube/constants/constants.go)
+* **NOTE**: On first run of minikube requires connection to above sites to download files. These sites are hard wired in [minikube constants](https://github.com/kubernetes/minikube/blob/master/pkg/minikube/constants/constants.go)
 
 ## System Used for Testing
 
-``` 
+```
 	MacBookPro with Boot Camp and Lenovo ThinkPad T450
 	
 	WinVer - Windows 10 Pro - Microsoft Windows Version 1803(OS Build 17134.1) with Hyper-V
-	
 ```
 
 
@@ -47,9 +46,10 @@ NOTE: On first run of minikube requires connection to above sites to download fi
 4.	Download executable minikube and kubectl to C:\appvol\. 
 	
 	PS C:\appvol> `curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe`
+	
 	PS C:\appvol> `curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe`
 	
-	NOTE: Download the latest stable release from respective site. [Minikube](https://github.com/kubernetes/minikube#windows) [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)
+	* Download the latest stable release from respective site. [Minikube](https://github.com/kubernetes/minikube#windows) [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)
 	
 5.	Check the Hyper-V VMSwitch
 
@@ -75,7 +75,7 @@ NOTE: On first run of minikube requires connection to above sites to download fi
 
 7.	Disable IPv6 on Network Adapter Check the system IP Address.  Control Panel> Network and Internet> Network and Sharing Center > vEthernet (Default Switch) > Properties > `uncheck` Internet Protocol version 6 (TCP/IPv6)
 
-	PS C:\Windows\system32> Get-NetIPAddress
+	PS C:\Windows\system32> `Get-NetIPAddress`
 
 	```
 		IPAddress         : 172.24.11.129
@@ -91,12 +91,11 @@ NOTE: On first run of minikube requires connection to above sites to download fi
 		PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
 		SkipAsSource      : False
 		PolicyStore       : ActiveStore
-		
 	```
 	
 8.	Check Network Route
 	
-	PS C:\Windows\system32> Get-NetRoute
+	PS C:\Windows\system32> `Get-NetRoute`
 
 	```	
 		ifIndex DestinationPrefix                              NextHop                                  RouteMetric ifMetric PolicyStore
@@ -116,13 +115,13 @@ NOTE: On first run of minikube requires connection to above sites to download fi
 		10      192.168.1.255/32                               0.0.0.0                                          256 45       ActiveStore
 		10      192.168.1.7/32                                 0.0.0.0                                          256 45       ActiveStore
 		10      192.168.1.0/24                                 0.0.0.0                                          256 45       ActiveStore
-	###	17      172.24.11.143/32                               0.0.0.0                                          256 5000     ActiveStore
-	###	17      172.24.11.129/32                               0.0.0.0                                          256 5000     ActiveStore
-	###	17      172.24.11.128/28                               0.0.0.0                                          256 5000     ActiveStore
+	==>	17      172.24.11.143/32                               0.0.0.0                                          256 5000     ActiveStore
+	==>	17      172.24.11.129/32                               0.0.0.0                                          256 5000     ActiveStore
+	==>	17      172.24.11.128/28                               0.0.0.0                                          256 5000     ActiveStore
 		1       127.255.255.255/32                             0.0.0.0                                          256 75       ActiveStore
 		1       127.0.0.1/32                                   0.0.0.0                                          256 75       ActiveStore
 		1       127.0.0.0/8                                    0.0.0.0                                          256 75       ActiveStore
-	###	10      0.0.0.0/0                                      192.168.1.1                                        0 45       ActiveStore
+	==>	10      0.0.0.0/0                                      192.168.1.1                                        0 45       ActiveStore
 	```	
 
 9.	Check minikube and kubectl version
@@ -154,17 +153,19 @@ NOTE: On first run of minikube requires connection to above sites to download fi
 	
 	PS C:\Windows\system32> `minikube.exe config view`
 	
+	```
 	- vm-driver: hyperv
 	- cpus: 4
 	- hyperv-virtual-switch: Default Switch
 	- kubernetes-version: v1.9.0
 	- memory: 8096
 	- v: 9
-	
+	```
 11.	Now start the first run of minikube and observer the screen logs.
 
 	PS C:\Windows\system32> `minikube start`
 	
+	```shell
 	...........
 	.............
 	Moving files into cluster...
@@ -182,11 +183,16 @@ NOTE: On first run of minikube requires connection to above sites to download fi
 	Starting cluster components...
 	Kubectl is now configured to use the cluster.
 	Loading cached images from config file.
+	```
+	
 	###if you observer something like this your setup is successful.
 	
 
 ## Reference Links and Special Thanks to
-[Nicolas Prigent](https://www.red-gate.com/simple-talk/sysadmin/virtualization/whats-new-microsoft-hyper-v-windows-10-fall-creators-update/)
-[Sarah Cooley](https://blogs.technet.microsoft.com/virtualization/2017/11/13/whats-new-in-hyper-v-for-windows-10-fall-creators-update/)
-[Minikube Issue No 1627](https://github.com/kubernetes/minikube/issues/1627)
+
+*[**Nicolas Prigent**](https://www.red-gate.com/simple-talk/sysadmin/virtualization/whats-new-microsoft-hyper-v-windows-10-fall-creators-update/)
+
+*[**Sarah Cooley**](https://blogs.technet.microsoft.com/virtualization/2017/11/13/whats-new-in-hyper-v-for-windows-10-fall-creators-update/)
+
+*[**Minikube Issue No 1627**](https://github.com/kubernetes/minikube/issues/1627)
 
