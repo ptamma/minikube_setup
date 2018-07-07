@@ -69,8 +69,8 @@ This document is an attempt to provide few more details on steps to installing m
 		Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
 		----                      --------------------                    ------- ------       ----------             ---------
 		vEthernet (Default Swi... Hyper-V Virtual Ethernet Adapter             17 Up           FA-15-B3-51-8A-44        10 Gbps
-		Bluetooth Network Conn... Bluetooth Device (Personal Area Netw...      11 Disconnected 8C-85-90-25-39-9D         3 Mbps
-		Wi-Fi                     Broadcom 802.11ac Network Adapter            10 Up           8C-85-90-1F-E4-59       468 Mbps
+		Bluetooth Network Conn... Bluetooth Device (Personal Area Netw...      11 Disconnected 8D-86-22-25-39-AB         3 Mbps
+		Wi-Fi                     Broadcom 802.11ac Network Adapter            10 Up           8D-86-22-2A-FE-34       468 Mbps
 	```
 
 7.	Disable IPv6 on Network Adapter Check the system IP Address.  Control Panel> Network and Internet> Network and Sharing Center > vEthernet (Default Switch) > Properties > `uncheck` Internet Protocol version 6 (TCP/IPv6)
