@@ -106,3 +106,25 @@
 			cluster: Running
 			kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.100"
 					
+Links for Windows
+https://github.com/kubernetes/minikube/issues/1627
+
+environment:
+Windows 10 Enterprise
+Version: 1703
+OS Build: 15063.786
+Running Docker for Windows with Hyper-V
+$ docker --version Docker version 17.09.0-ce, build afdb6d4
+$ minikube version minikube version: v0.24.1
+I needed to create the internal switch:
+  New-VMSwitch -SwitchName "NATSwitch" -SwitchType Internal
+  New-NetIPAddress –IPAddress 192.168.1.1 -PrefixLength 24 -InterfaceAlias "vEthernet (NATSwitch)"
+And create the NAT:
+New-NetNat –Name MinikubeNetwork -InternalIPInterfaceAddressPrefix 192.168.0.0/24
+Start the minikube using the Switch:
+minikube start --vm-driver="hyperv" --hyperv-virtual-switch="NATSwitch" --v=7 --alsologtostderr
+Then:
+$ minikube ip
+192.168.0.10
+$ kubectl cluster-info
+Kubernetes master is running at https://192.168.0.10:8443
