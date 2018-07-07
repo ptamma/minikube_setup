@@ -1,8 +1,8 @@
 # Minikube setup
 
-## Step by Step to install and configure minikube on Mac OSX and Windows 10
+## Step by Step to Install and Configure Minikube on Mac OSX and Windows 10
 
-*[**Mac OSX**](https://github.com/ptamma/minikube_setup/blob/win10/README-MAC.md)
+*[**Mac OSX**](https://github.com/ptamma/minikube_setup/blob/master/README-MAC.md)
 	
-*[**Windows 10**](https://github.com/ptamma/minikube_setup/blob/win10/README-WIN10.md)
+*[**Windows 10**](https://github.com/ptamma/minikube_setup/blob/master/README-WIN10.md)
 
