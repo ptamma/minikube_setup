@@ -1,0 +1,27 @@
+
+docker pull k8s.gcr.io/kube-proxy-amd64:v1.10.0
+docker pull k8s.gcr.io/kube-controller-manager-amd64:v1.10.0
+docker pull k8s.gcr.io/kube-scheduler-amd64:v1.10.0
+docker pull k8s.gcr.io/kube-apiserver-amd64:v1.10.0
+docker pull k8s.gcr.io/etcd-amd64:3.1.12 
+docker pull k8s.gcr.io/kube-addon-manager:v8.6   
+docker pull k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.8 
+docker pull k8s.gcr.io/k8s-dns-sidecar-amd64:1.14.8 
+docker pull k8s.gcr.io/k8s-dns-kube-dns-amd64:1.14.8 
+docker pull k8s.gcr.io/pause-amd64:3.1    
+docker pull k8s.gcr.io/kubernetes-dashboard-amd64:v1.8.1 
+docker pull gcr.io/k8s-minikube/storage-provisioner:v1.8.1 
+
+docker tag k8s.gcr.io/kube-proxy-amd64:v1.10.0				k8s.gcr.io/kube-proxy-amd64:v1.10.0	
+docker tag k8s.gcr.io/kube-controller-manager-amd64:v1.10.0	k8s.gcr.io/kube-controller-manager-amd64:v1.10
+docker tag k8s.gcr.io/kube-scheduler-amd64:v1.10.0			k8s.gcr.io/kube-scheduler-amd64:v1.10.0
+docker tag k8s.gcr.io/kube-apiserver-amd64:v1.10.0			k8s.gcr.io/kube-apiserver-amd64:v1.10.0
+docker tag k8s.gcr.io/etcd-amd64:3.1.12						k8s.gcr.io/etcd-amd64:3.1.12			
+docker tag k8s.gcr.io/kube-addon-manager:v8.6   			k8s.gcr.io/kube-addon-manager:v8.6   
+docker tag k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.8 	k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.
+docker tag k8s.gcr.io/k8s-dns-sidecar-amd64:1.14.8 			k8s.gcr.io/k8s-dns-sidecar-amd64:1.14.8 
+docker tag k8s.gcr.io/k8s-dns-kube-dns-amd64:1.14.8 		k8s.gcr.io/k8s-dns-kube-dns-amd64:1.14.8
+docker tag k8s.gcr.io/pause-amd64:3.1    					k8s.gcr.io/pause-amd64:3.1    		
+docker tag k8s.gcr.io/kubernetes-dashboard-amd64:v1.8.1 	k8s.gcr.io/kubernetes-dashboard-amd64:v1.8.
+docker tag gcr.io/k8s-minikube/storage-provisioner:v1.8.1 	gcr.io/k8s-minikube/storage-provisioner:v1.8.
+
